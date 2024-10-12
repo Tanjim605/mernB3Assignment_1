@@ -5,6 +5,7 @@
   --desktopWidth: 73.12rem;
   --phoneWidth: 30rem;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +13,11 @@
   box-sizing: border-box;
 }
 
-body > div{
-  margin: 0 40px;
+body > div,
+body > nav{
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 /* primary setup ends here */
 
@@ -23,6 +27,7 @@ body > div{
   display: flex;
   justify-content: space-between;
   margin: 15px 40px;
+  padding: 0;
 }
 
 .navigation{
@@ -50,7 +55,7 @@ body > div{
 .navigation ul li a{
   text-decoration: none;
 }
-
+.navigation ul li a,
 .navigation ul li a:visited{
   color: whitesmoke;
 }
@@ -168,6 +173,56 @@ body > div{
   line-height: 3ch;
 }
 
+
+/* Project styling start */
+.projectSlider{
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+  gap: 30px;
+}
+
+.projectSlider::-webkit-scrollbar{
+  width: 0;
+}
+
+.projectCard{
+  border: 1px #0e0e0f solid;
+  border-radius: 25px;
+  width: 270px;
+
+  text-align: center;
+}
+
+.projectCard img{
+  margin: 25px;
+  width: 220px;
+  border: 2px #0e0e0f solid;
+  border-radius: 25px;
+}
+
+.projectText{
+  margin: 10px 20px;
+}
+
+.projectCard .buttons{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 25px 30px;
+}
+
+.projectCard .buttons button{
+  background: #000;
+  color: whitesmoke;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  width: 90px;
+}
+
 /* Contact Me styling */
 .contactContainer{
   margin-top: 60px;
@@ -214,6 +269,11 @@ footer{
 @media only screen and (min-width: 740px) {
   body {
     /* background-color: lightblue; */
+  }
+
+  .navbar{
+    margin: 0 auto;
+    padding: 0;
   }
 
   .hero{
