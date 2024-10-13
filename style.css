@@ -11,6 +11,8 @@
   padding: 0;
   font-family: Roboto, sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 body > div,
@@ -23,7 +25,7 @@ body > nav{
 
 
 .navbar {
-  /* max-width: var(--phoneWidth); */
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 15px 40px;
@@ -31,10 +33,9 @@ body > nav{
 }
 
 .navigation{
-  /* margin: 0; */
   background: #181818;
   color: whitesmoke;
-  height: 40px;
+  height: 60px;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -55,6 +56,7 @@ body > nav{
 .navigation ul li a{
   text-decoration: none;
 }
+
 .navigation ul li a,
 .navigation ul li a:visited{
   color: whitesmoke;
@@ -67,8 +69,6 @@ body > nav{
 .hamburger {
   width: 30px;
 }
-
-
 
 /* Hero section styling starts here */
 
@@ -114,12 +114,12 @@ body > nav{
   display: flex;
   margin: 50px auto;
   width: min(400px, 70vw) ;
-  /* width: 200px; */
   border: #1d1d1f 5px solid; 
   border-radius: 100%;
 }
 
 /* About section styling start */
+
 .aboutContainer{
   margin-top: 60px;
   margin-bottom: 80px;
@@ -141,7 +141,6 @@ body > nav{
 }
 
 .cards{
-  /* display: flex; */
   text-align: center;
 }
 
@@ -176,6 +175,7 @@ body > nav{
 
 
 /* Project styling start */
+
 .projectSlider{
   margin-top: 60px;
   display: flex;
@@ -225,6 +225,7 @@ body > nav{
 }
 
 /* Contact Me styling */
+
 .contactContainer{
   margin-top: 60px;
   text-align: center;
@@ -254,6 +255,7 @@ body > nav{
 }
 
 /* Footer styling */
+
 footer{
   margin-top: 50px;
   width: 100%;
@@ -269,13 +271,11 @@ footer{
 }
 
 @media only screen and (min-width: 740px) {
-  body {
-    /* background-color: lightblue; */
-  }
-
   .navbar{
     margin: 0 auto;
     padding: 0;
+    position: sticky;
+    top: 0;
   }
 
   .hero{
@@ -283,6 +283,10 @@ footer{
     flex-direction: row-reverse;
     align-items: center;
     align-self: center;
+  }
+
+  .logo img{
+    margin: 10px 50px;
   }
 
   .heroRight{
