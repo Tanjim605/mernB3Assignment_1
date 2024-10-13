@@ -113,7 +113,8 @@ body > nav{
 .heroLeft img{
   display: flex;
   margin: 50px auto;
-  width: 400px;
+  width: min(400px, 70vw) ;
+  /* width: 200px; */
   border: #1d1d1f 5px solid; 
   border-radius: 100%;
 }
@@ -238,6 +239,7 @@ body > nav{
 
 .contactInfo{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 60px;
